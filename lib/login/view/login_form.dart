@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 
 import 'package:flutter/material.dart';
+import 'package:from_login/login/view/SharedPrefs.dart';
 
 import 'package:from_login/main.dart';
 
@@ -72,9 +73,9 @@ class _LoginScreenState extends State<LoginScreen> {
               // NavigationService.instance.pushAndReplac(main());
               // : NavigationService.instance
               //     .pushAndReplac(OtpVerificationRoute);
-
-              // _sharedPrefs
-              //     .setToken(cubit.state.userModel?.data.accessToken ?? '');
+              SharedPrefs _sharedPrefs = SharedPrefs();
+              _sharedPrefs
+                  .setToken(cubit.state.userModel?.data.accessToken ?? '');
               // NavigationService.instance.navigatorKey.currentContext!
               //     .read<Welcome>()
               //     .updateName(context.read<LoginCubit>().state.userModel?.data);
@@ -108,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.w600),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 120,
                       ),
                       // Image.asset(
                       //   'logo_1'.png,

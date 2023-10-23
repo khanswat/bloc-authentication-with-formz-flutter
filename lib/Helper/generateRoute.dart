@@ -9,6 +9,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case SplashRoute:
       return MaterialPageRoute(builder: (context) => SplashPage());
     case LoginRoute:
+      return MaterialPageRoute(builder: (context) => SplashPage());
+    case LoginRoute1:
       return MaterialPageRoute(builder: (context) => LoginScreen());
 
     default:

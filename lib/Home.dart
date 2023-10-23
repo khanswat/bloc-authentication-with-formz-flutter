@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
+import 'package:from_login/Helper/NavigationServices.dart';
+import 'package:from_login/Helper/routesnames.dart';
 import 'package:from_login/login/bloc/login_state.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'login/bloc/login_bloc.dart';
 
@@ -48,7 +51,11 @@ class _HomeState extends State<Home> {
                         'Log out',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
-                onPressed: () {});
+                onPressed: () async {
+                  var sharedPrefs = await SharedPreferences.getInstance();
+                  await sharedPrefs.remove('token');
+                  NavigationService.instance.pushAndReplac(LoginRoute1);
+                });
           },
         ),
       ),

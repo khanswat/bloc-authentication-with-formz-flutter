@@ -46,6 +46,7 @@ dependencies:
   connectivity_plus: ^5.0.1
   hydrated_bloc: ^8.1.0
   path_provider: 
+  shared_preferences:
   
 
 dev_dependencies:
