@@ -6,7 +6,7 @@ class TokenInterceptors extends Interceptor {
   @override
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
-    options.baseUrl = 'https://sihmgtapp.shifa.com.pk';
+    options.baseUrl = 'https://.......';
 
     options.headers['Authorization'] = 'Bearer $token';
 
